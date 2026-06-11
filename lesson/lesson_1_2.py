@@ -50,4 +50,64 @@ n = c > d or d > 10
 #анологично ANDесли первая часть false то будет false
 m = c < 0 and d != 1
 
+#Полезно также знать про тернарный оператор, он позволяет
+# в компактной форме задать переменную в зависимости от условия
 
+v = c if c > d else d
+
+if c > d:
+    v = c
+else: v = d
+
+# Циклы - FOR, для последовательности чисел
+#(старт включительно, конец не включительно, шаг +1 значение по умолчанию)
+for i in range(1, 10, 1):
+    print(i)
+print("END")
+
+#от нуля до десяти будет выходить
+for i in range(10):
+    print(i)
+print("END")
+
+# Циклы - FOR, для последовательности символов
+
+for i in "abc123":
+    print(i)
+
+# Циклы - FOR, с continue
+for i in range(10):
+    if i == 4:
+        continue #пропустим если числа равна 4
+    print(i)
+print("END")
+
+# Циклы - FOR, с break
+for i in range(10):
+    if i == 4:
+        break #можем полностью остановить цикл если числа равна 4
+    print(i)
+print("END")
+
+# Циклы - WHILE, выполняет код пока выполнены некоторые условия
+
+k = 0
+while k < 10:
+    print(k)
+    k += 1
+    if k > 5:
+        break
+print("end")
+
+#пустая строка
+print(bool(""), bool("Abc"))
+
+#проверяет data является пустой строкой или нет, если пустое то завершает цикл
+data = input()
+while data:
+    print("Entered:", data)
+    data = input()
+
+
+while data := input():
+    print("Entered: ", data)
